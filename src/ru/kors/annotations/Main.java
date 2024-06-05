@@ -5,5 +5,8 @@ public class Main {
         Car audi = new Audi();
         int speed = 101;
         audi.drive(speed);
+
+        @Query(value = "select * from test", nativeQuery = true)
+        String query = "";
     }
 }
