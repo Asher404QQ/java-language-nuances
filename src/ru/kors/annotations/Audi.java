@@ -1,6 +1,7 @@
 package ru.kors.annotations;
 
-@Overview(version = "1.00", status = Overview.ReviewStatus.PASSED)
+@Author(firstName = "Anton", lastName = "Korsakov")
+@Author(firstName = "Petr", lastName = "Petrov")
 public class Audi extends Car{
     @Overview(version = "2.00", status = Overview.ReviewStatus.FAILED)
     private static final double DEFAULT_SPEED = 45.00;

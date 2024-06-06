@@ -1,11 +1,13 @@
 package ru.kors.annotations;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
+@Documented
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Inherited
 public @interface Overview {
-    @Deprecated
+    @Deprecated(since = "1.2", forRemoval = true)
     String createdBy() default "Korsakov Anton";
     Author[] creators() default {
         @Author(firstName = "Korsakov", lastName = "Anton"),
